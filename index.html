@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritesh Sharma | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+nav h1 {
+    color: #38bdf8;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e5e7eb;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+/* SECTIONS (FIXED SPACING) */
+section {
+    padding: 80px 10%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.9s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+}
+
+.hero-text span {
+    color: #38bdf8;
+}
+
+.hero-text p {
+    margin-top: 15px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* PROFILE PHOTO */
+.profile-pic {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56,189,248,0.4);
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 45px rgba(56,189,248,0.7);
+}
+
+/* CARD */
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.2);
+}
+
+/* SKILLS */
+.skill {
+    margin: 12px 0;
+}
+
+.skill-bar {
+    background: #1e293b;
+    height: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+    transition: width 1.5s ease;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #020617;
+    color: #94a3b8;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .hero {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>Ritesh Sharma</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Ritesh Sharma</span></h2>
+        <p>
+            BTech Computer Science Engineering (AIML) student passionate about
+            web development, programming, and modern technologies.
+        </p>
+    </div>
+
+    <!-- PHOTO -->
+    <div class="profile-pic">
+        <!-- Replace photo.jpg with your image -->
+        <img src="images/1000147840.jpg" alt="">
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am a <strong>BTech CSE (AIML)</strong> student at
+            <strong>Rungta International Skills University</strong>
+            (2025 – 2029). I focus on building professional websites and
+            continuously improving my technical and leadership skills.
+        </p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card">
+        <div class="skill">
+            <p>HTML</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="90%"></div></div>
+        </div>
+        <div class="skill">
+            <p>CSS</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="85%"></div></div>
+        </div>
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="75%"></div></div>
+        </div>
+        <div class="skill">
+            <p>C Programming</p>
+            <div class="skill-bar"><div class="skill-fill" data-width="70%"></div></div>
+        </div>
+    </div>
+
+    <h2 style="margin-top:30px;">Soft Skills</h2>
+    <div class="card">
+        <ul>
+            <li>✔ Communication</li>
+            <li>✔ Leadership</li>
+            <li>✔ Good Listener</li>
+        </ul>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <p>
+            <strong>BTech – CSE (AIML)</strong><br>
+            Rungta International Skills University<br>
+            <em>2025 – 2029</em>
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        📧 Email: <strong>genritesh341@gmail.com</strong>
+    </div>
+</section>
+
+<footer>
+    © 2025 | Ritesh Sharma
+</footer>
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            entry.target.querySelectorAll(".skill-fill").forEach(bar => {
+                bar.style.width = bar.dataset.width;
+            });
+        }
+    });
+}, { threshold: 0.15 });
+
+sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
